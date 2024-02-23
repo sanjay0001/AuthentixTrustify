@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import HomeView,Demo
+from .views import HomeView,RedirectLogin
 
 urlpatterns=[
     path('',HomeView.as_view(),name="home"),
-    path('h/',Demo.as_view())
+    path('login_redirect/',RedirectLogin.as_view())
 ]

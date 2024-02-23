@@ -11,14 +11,15 @@ function Login(){
             const response = await fetch(URL+"user/login/",{
                 method:"POST",
                 headers: { 'Content-Type': 'application/json' },
+                // 'credentials' : 'include',
                 body: JSON.stringify({ "email": email,"password":password })
             })
             const data  = await response.json()
             if(data.status){
                 console.log(data)
                 console.log(data.message)
-                console.log("Navigating")
-                navigate("/")
+                // console.log("Navigating")
+                // navigate("/")
 
             }else{
                 console.log(data.message)
